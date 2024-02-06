@@ -4260,7 +4260,7 @@ h6, .h6 {
     .hero-six-wrapper .left-image {
       display: none; } }
   .hero-six-wrapper .hero-six-content {
-    padding: 10%; }
+    padding: 5%; }
     @media only screen and (max-width: 1199px) {
       .hero-six-wrapper .hero-six-content {
         z-index: 5;

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Accordion } from "react-bootstrap";
 import Menu from "./Menu";
+import Image from "next/image";
+import { AxioLogoWebp } from "@/src/assets";
 const Nav = ({ singleMenu }) => {
   return (
     <nav className="main-menu navbar-expand-lg">
@@ -8,22 +10,15 @@ const Nav = ({ singleMenu }) => {
         <div className="navbar-header py-10">
           <div className="mobile-logo">
             <Link legacyBehavior href="/">
-              <a>
-                <img
-                  src="assets/images/logos/logo.png"
-                  alt="Logo"
-                  title="Logo"
-                />
-              </a>
+              <Image
+                src={AxioLogoWebp}
+                alt="Logo Axios Click"
+                title="Logo Axios Click"
+              />
             </Link>
           </div>
         </div>
-        <Accordion.Collapse
-          eventKey="navbar-collapse"
-          className="navbar-collapse clearfix"
-        >
-          <Menu singleMenu={singleMenu} />
-        </Accordion.Collapse>
+        <Menu singleMenu={singleMenu} />
       </Accordion>
     </nav>
   );

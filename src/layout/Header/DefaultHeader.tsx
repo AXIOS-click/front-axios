@@ -2,6 +2,8 @@ import Link from "next/link";
 import Nav from "./Nav";
 import NavSearch from "./NavSearch";
 import { FC } from "react";
+import { AxioLogoWebp } from "@/src/assets";
+import Image from "next/image";
 
 interface DefaultHeaderProps {
   singleMenu?: boolean;
@@ -12,41 +14,26 @@ const DefaultHeader: FC<DefaultHeaderProps> = ({ singleMenu, dark }) => {
   return (
     <header className="main-header menu-absolute">
       {/*Header-Upper*/}
-      <div className="header-upper">
+      <div className="header-upper p-2">
         <div className="container container-1620 clearfix">
           <div className="header-inner rpy-10 rel d-flex align-items-center">
             <div className="logo-outer">
               <div className="logo">
                 <Link legacyBehavior href="/">
-                  <a>
-                    <img
-                      src={
-                        dark
-                          ? "assets/images/logos/logo-white.png"
-                          : "assets/images/logos/logo.png"
-                      }
-                      alt="Logo"
-                      title="Logo"
-                    />
-                  </a>
+                  <Image
+                    src={AxioLogoWebp}
+                    alt="Logo Axios Click"
+                    title="Logo Axios Click"
+                    width={150}
+                    height={32}
+                  />
                 </Link>
               </div>
             </div>
             <div className="nav-outer ms-lg-auto clearfix">
               {/* Main Menu */}
-              <Nav singleMenu={singleMenu} />
+              {/* <Nav singleMenu={singleMenu} /> */}
               {/* Main Menu End*/}
-            </div>
-            {/* Nav Search */}
-            <NavSearch />
-            {/* Menu Button */}
-            <div className="menu-btns">
-              {/* menu sidbar */}
-              <div className="menu-sidebar">
-                <button>
-                  <img src="assets/images/icons/toggler.svg" alt="Toggler" />
-                </button>
-              </div>
             </div>
           </div>
         </div>
