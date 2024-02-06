@@ -596,6 +596,7 @@ a.theme-btn {
   color: var(--ygency-secondary-color); }
   .list-style-one li:not(:last-child) {
     margin-bottom: 8px; }
+  
   .list-style-one li:before {
     -webkit-box-flex: 0;
     -ms-flex: none;
@@ -612,6 +613,23 @@ a.theme-btn {
     margin-right: 12px;
     border-radius: 50%;
     color: var(--ygency-primary-color);
+    font-family: 'Font Awesome 5 Pro'; }
+    .list-style-one li.deactivated:before {
+      -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+    margin-top: 6px;
+    content: "\f00c";
+    font-weight: 600;
+    line-height: 16px;
+    border: 2px solid;
+    text-align: center;
+    margin-right: 12px;
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.5);
     font-family: 'Font Awesome 5 Pro'; }
 
 /* List style Two */
