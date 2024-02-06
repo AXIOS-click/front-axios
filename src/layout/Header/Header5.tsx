@@ -1,8 +1,14 @@
 import Link from "next/link";
 import Nav from "./Nav";
 import NavSearch from "./NavSearch";
+import { FC } from "react";
 
-const Header5 = ({ singleMenu, dark }) => {
+interface Header5Props {
+  singleMenu?: boolean;
+  dark?: boolean;
+}
+
+const Header5: FC<Header5Props> = ({ singleMenu, dark }) => {
   return (
     <header className="main-header menu-absolute header-two">
       <div className="header-top bgc-primary">

@@ -3,7 +3,13 @@ import { Accordion } from "react-bootstrap";
 import Menu from "./Menu";
 import Image from "next/image";
 import { AxioLogoWebp } from "@/src/assets";
-const Nav = ({ singleMenu }) => {
+import { FC } from "react";
+
+interface NavProps {
+  singleMenu?: boolean;
+}
+
+const Nav: FC<NavProps> = ({ singleMenu }) => {
   return (
     <nav className="main-menu navbar-expand-lg">
       <Accordion>

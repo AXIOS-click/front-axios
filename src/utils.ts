@@ -1,4 +1,6 @@
-// animation
+const isServer = typeof window === 'undefined'
+const WOW = !isServer ? require('wow.js') : null
+  
 export const animation = () => {
   if (typeof window !== "undefined") {
     window.WOW = require("wowjs");
@@ -11,8 +13,7 @@ export const stickyNav = () => {
   window.addEventListener("scroll", () => {
     let offset = window.scrollY;
     const sticky = document.querySelectorAll(".main-header");
-    for (let i = 0; i < sticky.length; i++) {
-      const stick = sticky[i];
+    for (const stick of sticky) {
       if (stick) {
         if (offset > 10) {
           stick.classList.add("fixed-header");
@@ -42,15 +43,15 @@ export const sidebarClick = () => {
 };
 
 export const scrollTopFun = () => {
-  let scrollUp = document.querySelector(".scroll-top") as HTMLElement | null,
+  let scrollUp = document!.querySelector(".scroll-top") as HTMLElement,
   lastScrollTop = 0;
 
   window.addEventListener("scroll", () => {
     let st = window.scrollY;
     if (st > 110) {
-      scrollUp!.style.display = "block";
+      scrollUp.style.display = "block";
     } else {
-      scrollUp!.style.display = "none";
+      scrollUp.style.display = "none";
     }
   });
 };

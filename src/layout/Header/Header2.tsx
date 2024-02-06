@@ -1,7 +1,14 @@
 import Link from "next/link";
 import Nav from "./Nav";
 import NavSearch from "./NavSearch";
-const Header2 = ({ singleMenu, dark }) => {
+import { FC } from "react";
+
+interface Header2Props {
+  singleMenu?: boolean;
+  dark?: boolean;
+}
+
+const Header2: FC<Header2Props> = ({ singleMenu, dark }) => {
   return (
     <header className="main-header menu-absolute">
       {/*Header-Upper*/}
