@@ -3,7 +3,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section className="hero-area-six pt-185 rpt-150 pb-130 rpb-100 rel z-1">
+    <section className="hero-area-six pt-185 rpt-150 rpb-100 rel z-1">
       <div className="container container-1620">
         <div className="hero-six-wrapper">
           <div className="hero-social">
@@ -41,7 +41,7 @@ const HeroSection = () => {
                   En <b>AXIOS CLICK</b> creemos que la presencia digital, la
                   forma de lograr posicionar tu marca, y nosotros estamos aquí
                   para <b>ayudarte a conseguirlo.</b> Las empresas de
-                  <b>ÉXITO</b> son las que se atrevieron a probar algo
+                  <b> ÉXITO</b> son las que se atrevieron a probar algo
                   diferente.
                 </p>
                 <Link href="services" className="theme-btn style-two">
