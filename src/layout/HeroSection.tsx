@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { FACEBOOK_LINK, INSTAGRAM_LINK, LINKEDIN_LINK, WHATSAPP_LINK } from "../constants/common.constant";
 
 const HeroSection = () => {
   return (
@@ -10,27 +11,31 @@ const HeroSection = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.facebook.com/AXIOS-CLICK-109389375125627/"
+              href={FACEBOOK_LINK}
             >
               <i className="fab fa-facebook-f" /> <span>Facebook</span>
             </a>
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.instagram.com/axiosclick/"
+              href={INSTAGRAM_LINK}
             >
               <i className="fab fa-instagram" /> <span>Instagram</span>
             </a>
-            {[...Array(2)].map((_, i) => (
-              <p
-                key={`hero-social-${i + 1}`}
-                style={{
-                  visibility: "hidden",
-                }}
-              >
-                a
-              </p>
-            ))}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={WHATSAPP_LINK}
+            >
+              <i className="fab fa-whatsapp" /> <span>Whatsapp</span>
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={LINKEDIN_LINK}
+            >
+              <i className="fab fa-linkedin" /> <span>Linkedin</span>
+            </a>
           </div>
           <div className="row no-gap">
             <div className="col-xl-2"></div>

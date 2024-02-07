@@ -1,4 +1,5 @@
 import { AxioLogoWebp } from "@/src/assets";
+import { FACEBOOK_LINK, INSTAGRAM_LINK, LINKEDIN_LINK, WHATSAPP_LINK } from "@/src/constants/common.constant";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
@@ -16,7 +17,7 @@ const Footer6: FC<Footer6Props> = ({ dark }) => {
             <div className="footer-widget newsletter-widget wow fadeInUp delay-0-2s">
               <div className="footer-logo mb-20">
                 <Link href="/">
-                <Image
+                  <Image
                     src={AxioLogoWebp}
                     alt="Logo Axios Click"
                     width={150}
@@ -25,41 +26,30 @@ const Footer6: FC<Footer6Props> = ({ dark }) => {
                 </Link>
               </div>
               <div className="text mb-25">
-                Ut enim ad minima veniam nostrum exercitationem ullam corporise
+                Las empresas de éxito son las que se atrevieron a probar algo
+                diferente.
               </div>
-              <form className="footer-newsletter" action="#">
+              {/* <form className="footer-newsletter" action="#">
                 <input type="email" placeholder="Email Address" required />
                 <button type="submit">
                   <i className="far fa-long-arrow-right" />
                 </button>
-              </form>
+              </form> */}
             </div>
           </div>
           <div className="col-xl-2 col-lg-2 col-md-3 col-6">
             <div className="footer-widget footer-links wow fadeInUp delay-0-3s">
-              <h5 className="footer-title">Products</h5>
+              <h5 className="footer-title">Axios Click</h5>
               <div className="footer-widget widget_nav_menu">
                 <ul className="list-style-two">
                   <li>
-                    <a href="#">Spectra</a>
-                  </li>
-                  <li>
-                    <a href="#">MemberPress</a>
-                  </li>
-                  <li>
-                    <a href="#">WPforms</a>
-                  </li>
-                  <li>
-                    <a href="#">AIOSEO</a>
-                  </li>
-                  <li>
-                    <a href="#">Wordfence</a>
+                    <Link href="/">Principal</Link>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <div className="col-xl-2 col-lg-2 col-md-3 col-6">
+          {/* <div className="col-xl-2 col-lg-2 col-md-3 col-6">
             <div className="footer-widget footer-links wow fadeInUp delay-0-4s">
               <h5 className="footer-title">Resources</h5>
               <div className="footer-widget widget_nav_menu">
@@ -106,22 +96,24 @@ const Footer6: FC<Footer6Props> = ({ dark }) => {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="col-xl-3 col-lg-4 col-sm-6">
             <div className="footer-widget footer-info wow fadeInUp delay-0-6s">
-              <h5 className="footer-title">Contact</h5>
+              <h5 className="footer-title">Contacto</h5>
               <ul className="list-style-two">
                 <li>
                   <i className="far fa-map-marker-alt" />{" "}
-                  <span>Baird House, 15-17 St Cross StLondon EC1N 8UW</span>
+                  <span>Quito, Ecuador</span>
                 </li>
                 <li>
                   <i className="far fa-envelope" />{" "}
-                  <a href="mailto:support@gmail.com">support@gmail.com</a>
+                  <a href="mailto:administrator@axios.click">
+                    administrator@axios.click
+                  </a>
                 </li>
                 <li>
                   <i className="far fa-phone" />{" "}
-                  <a href="callto:+000(123)45688">+000 (123) 456 88</a>
+                  <a href="tel:+593968544194">+593 96 854 4194</a>
                 </li>
               </ul>
             </div>
@@ -132,25 +124,42 @@ const Footer6: FC<Footer6Props> = ({ dark }) => {
             <div className="col-lg-6">
               <div className="footer-copyright-text wow fadeInUp delay-0-2s">
                 <p>
-                  Copyright @2023, <Link href="/">Ygency</Link> All Rights
-                  Reserved
+                  Copyright @{new Date().getFullYear()},{" "}
+                  <Link href="/">Axios.click</Link> All Rights Reserved
                 </p>
               </div>
             </div>
             <div className="col-lg-6">
               <div className="footer-bottom-social text-lg-end wow fadeInRight delay-0-2s">
                 <div className="social-style-two">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={FACEBOOK_LINK}
+                  >
                     <i className="fab fa-facebook-f" />
                   </a>
-                  <a href="#">
-                    <i className="fab fa-twitter" />
-                  </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={INSTAGRAM_LINK}
+                  >
                     <i className="fab fa-instagram" />
                   </a>
-                  <a href="#">
-                    <i className="fab fa-pinterest-p" />
+                  {/* Whatsapp */}
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={WHATSAPP_LINK}
+                  >
+                    <i className="fab fa-whatsapp" />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={LINKEDIN_LINK}
+                  >
+                    <i className="fab fa-linkedin" />
                   </a>
                 </div>
               </div>
