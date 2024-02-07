@@ -1,5 +1,6 @@
 import Layout from "@/src/components/layout/Layout";
 import AdvertiseSection from "@/src/layout/AdvertiseSection";
+import CTAsection from "@/src/layout/CTAsection";
 import FreeServices from "@/src/layout/FreeServices";
 import HeadlineSection from "@/src/layout/HeadlineSection";
 import HeroSection from "@/src/layout/HeroSection";
@@ -21,6 +22,7 @@ export default function Home() {
         <HeadlineSection />
         <PricingSection />
         <FreeServices />
+        <CTAsection />
       </Layout>
     </main>
   );
