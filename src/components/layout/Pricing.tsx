@@ -5,7 +5,7 @@ interface PricingProps {
   pricing: IPricing;
 }
 const Pricing: FC<PricingProps> = ({ pricing }) => {
-  const { title, description, features, price, save } = pricing;
+  const { title, description, features, price, save, icon } = pricing;
 
   return (
     <div className="col-xl-4 col-md-6 wow fadeInUp delay-0-4s">
@@ -16,8 +16,8 @@ const Pricing: FC<PricingProps> = ({ pricing }) => {
         }}
       >
         <div className="icon-title">
-          <div className="icon">
-            <img src="assets/images/icons/price.svg" alt="Icon" />
+          <div className="icon  bg-transparent">
+            <i className={icon} />
           </div>
           <h5>{title}</h5>
         </div>

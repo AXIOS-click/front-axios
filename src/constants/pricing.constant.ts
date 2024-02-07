@@ -6,6 +6,7 @@ export interface Pricing {
   title: string;
   price: number;
   description: string;
+  icon: string;
   save?: number;
   recommended?: boolean;
   features: Features[];
@@ -14,6 +15,7 @@ export const WEB_DEV_PRICING: Pricing[] = [
   {
     title: "Paquete Emprendedor",
     price: 100,
+    icon: "flaticon-abstract",
     save: 20,
     description: "",
     features: [
@@ -42,6 +44,7 @@ export const WEB_DEV_PRICING: Pricing[] = [
   {
     title: "Paquete Profesional",
     price: 130,
+    icon: "flaticon-liquid",
     save: 10,
     description: "",
     features: [
@@ -70,6 +73,7 @@ export const WEB_DEV_PRICING: Pricing[] = [
     title: "Paquete Premium",
     price: 180,
     save: 15,
+    icon: "flaticon-petals",
     description: "",
     features: [
       {
