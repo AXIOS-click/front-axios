@@ -1,6 +1,11 @@
 import Link from "next/link";
 import React from "react";
-import { FACEBOOK_LINK, INSTAGRAM_LINK, LINKEDIN_LINK, WHATSAPP_LINK } from "../constants/common.constant";
+import {
+  FACEBOOK_LINK,
+  INSTAGRAM_LINK,
+  LINKEDIN_LINK,
+  WHATSAPP_LINK,
+} from "../constants/common.constant";
 
 const HeroSection = () => {
   return (
@@ -8,32 +13,16 @@ const HeroSection = () => {
       <div className="container container-1620">
         <div className="hero-six-wrapper">
           <div className="hero-social">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href={FACEBOOK_LINK}
-            >
+            <a target="_blank" rel="noopener noreferrer" href={FACEBOOK_LINK}>
               <i className="fab fa-facebook-f" /> <span>Facebook</span>
             </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href={INSTAGRAM_LINK}
-            >
+            <a target="_blank" rel="noopener noreferrer" href={INSTAGRAM_LINK}>
               <i className="fab fa-instagram" /> <span>Instagram</span>
             </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href={WHATSAPP_LINK}
-            >
+            <a target="_blank" rel="noopener noreferrer" href={WHATSAPP_LINK}>
               <i className="fab fa-whatsapp" /> <span>Whatsapp</span>
             </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href={LINKEDIN_LINK}
-            >
+            <a target="_blank" rel="noopener noreferrer" href={LINKEDIN_LINK}>
               <i className="fab fa-linkedin" /> <span>Linkedin</span>
             </a>
           </div>
@@ -49,8 +38,13 @@ const HeroSection = () => {
                   <b> ÉXITO</b> son las que se atrevieron a probar algo
                   diferente.
                 </p>
-                <Link href="services" className="theme-btn style-two">
-                  Explore Services <i className="far fa-arrow-right" />
+                <Link
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="theme-btn style-two"
+                >
+                  Agenda Una consulta <i className="far fa-arrow-right" />
                 </Link>
               </div>
             </div>

@@ -21,6 +21,19 @@ Sentry.init({
 
   // You can remove this option if you're not planning to use the Sentry Session Replay feature:
   integrations: [
+    Sentry.feedbackIntegration({
+      colorScheme: "dark",
+      buttonLabel: "Dejanos Comentarios!",
+      emailLabel: "Tu Correo Electrónico",
+      emailPlaceholder: "johndoe@gmail.com",
+      nameLabel: "Tu Nombre",
+      namePlaceholder: "John Doe",
+      messageLabel: "¿Qué te gustaría mejorar?",
+      messagePlaceholder: "Tu mensaje es importante para nosotros",
+      formTitle: "Formulario de Comentarios",
+      submitButtonLabel: "Enviar",
+      cancelButtonLabel: "Cancelar",
+    }),
     Sentry.browserTracingIntegration(),
     Sentry.replayIntegration({
       // Additional Replay configuration goes in here, for example:
