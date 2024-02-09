@@ -1,6 +1,7 @@
-import Link from "next/link";
 import { WEB_DEV_PRICING } from "../constants/pricing.constant";
 import Pricing from "../components/layout/Pricing";
+import Image from "next/image";
+import { PricingBanner } from "../assets";
 
 const PricingSection = () => {
   return (
@@ -25,9 +26,11 @@ const PricingSection = () => {
               <span className="join-us">Inicia con nosotros</span>
               <h4>Precios asombrosos para empresas/negocios en crecimiento</h4>
               <div className="hand-shape">
-                <img
-                  src="assets/images/shapes/pricing-banner-hand-shape.png"
+                <Image
+                  src={PricingBanner}
                   alt="Pricing Banner Shape"
+                  width={102}
+                  height={110}
                 />
               </div>
             </div>

@@ -6,6 +6,8 @@ import {
   LINKEDIN_LINK,
   WHATSAPP_LINK,
 } from "../constants/common.constant";
+import { HeroImage } from "../assets";
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
@@ -50,7 +52,13 @@ const HeroSection = () => {
             </div>
             <div className="col-xl-4 align-self-end">
               <div className="right-image">
-                <img src="assets/images/hero/hero-six2.png" alt="Hero" />
+                <Image
+                  src={HeroImage}
+                  alt="Imagen Principal | Axios lick"
+                  width={470}
+                  height={515}
+                  loading="eager"
+                />
               </div>
             </div>
           </div>

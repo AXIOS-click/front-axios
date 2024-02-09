@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { WHATSAPP_LINK } from "../constants/common.constant";
+import Image from "next/image";
+import { CircleIcon, CloseIcon, WeveLinesIcon } from "../assets";
 
 const CTAsection = () => {
   return (
@@ -18,35 +20,47 @@ const CTAsection = () => {
         </div>
       </div>
       <div className="cta-shapes">
-        <img
+        <Image
           className="shape one"
-          src="assets/images/shapes/circle.png"
-          alt="Circle"
+          src={CircleIcon}
+          alt="Circle icon | Axios Click"
+          width={15}
+          height={15}
         />
-        <img
+        <Image
           className="shape two"
-          src="assets/images/shapes/close.png"
-          alt="Close"
+          src={CloseIcon}
+          alt="Close icon | Axios Click"
+          width={15}
+          height={15}
         />
-        <img
+        <Image
           className="shape three"
-          src="assets/images/shapes/weve-lines.png"
-          alt="Weve Line"
+          src={WeveLinesIcon}
+          alt="Weve Line icon | Axios Click"
+          width={60}
+          height={43}
         />
-        <img
+        <Image
           className="shape four"
-          src="assets/images/shapes/circle.png"
-          alt="Circle"
+          src={CircleIcon}
+          alt="Circle icon | Axios Click"
+          width={15}
+          height={15}
         />
-        <img
+        <Image
           className="shape five"
-          src="assets/images/shapes/close.png"
-          alt="Close"
+          src={CloseIcon}
+          alt="Close icon | Axios Click"
+          width={15}
+          height={15}
         />
-        <img
+        <Image
           className="shape six"
-          src="assets/images/shapes/weve-lines.png"
-          alt="Weve Line"
+          src={WeveLinesIcon}
+          alt="Weve Line icon | Axios Click"
+          width={60}
+          height={43}
         />
       </div>
     </div>
