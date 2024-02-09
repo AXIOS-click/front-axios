@@ -1,4 +1,6 @@
+import { RightArrow } from "@/src/assets";
 import { Pricing as IPricing } from "@/src/constants/pricing.constant";
+import Image from "next/image";
 import React, { FC } from "react";
 
 interface PricingProps {
@@ -42,7 +44,7 @@ const Pricing: FC<PricingProps> = ({ pricing }) => {
           </span>
           {save && (
             <>
-              <img src="assets/images/shapes/right-arrow.png" alt="Arrow" />
+              <Image src={RightArrow} alt="Flecha derecha pricing | Axios Click" />
               <span className="offer-text">Ahorra {save}%</span>
             </>
           )}
