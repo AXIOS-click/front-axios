@@ -73,6 +73,19 @@
   justify-content: center;
   margin: 0 auto;
 }
+.category span {
+  text-transform: capitalize;
+}
+.category span:not(:last-child)::after {
+  content: ", "; /* El caracter después de cada span que no es el último */
+}
+.theme-btn.style-two{
+  padding: 8px!important;
+  margin-top: 15px!important;
+}
+section.product-area.py-130.rpy-100.rel.z-1 > div > div.row > div > div > div.content > div > div > span {
+  margin-left: 0;
+}
 /* .project-item {
   margin-left: 0 !important;
   margin-right: 0 !important;

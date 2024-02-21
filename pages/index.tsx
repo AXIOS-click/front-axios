@@ -1,11 +1,11 @@
 import Layout from "@/src/components/layout/Layout";
-import AdvertiseSection from "@/src/layout/AdvertiseSection";
-import CTAsection from "@/src/layout/CTAsection";
-import FreeServices from "@/src/layout/FreeServices";
-import HeadlineSection from "@/src/layout/HeadlineSection";
-import HeroSection from "@/src/layout/HeroSection";
-import MetricsSection from "@/src/layout/MetricsSection";
-import PricingSection from "@/src/layout/PricingSection";
+import AdvertiseSection from "@/modules/Home/layout/AdvertiseSection";
+import CTAsection from "@/modules/Home/layout/CTAsection";
+import FreeServices from "@/modules/Home/layout/FreeServices";
+import HeadlineSection from "@/modules/Home/layout/HeadlineSection";
+import HeroSection from "@/modules/Home/layout/HeroSection";
+import MetricsSection from "@/modules/Home/layout/MetricsSection";
+import PricingSection from "@/modules/Home/layout/PricingSection";
 import dynamic from "next/dynamic";
 
 const Counter = dynamic(() => import("@/src/components/Counter"), {
@@ -14,7 +14,7 @@ const Counter = dynamic(() => import("@/src/components/Counter"), {
 
 export default function Home() {
   return (
-    <main className={`}`}>
+    <main className={``}>
       <Layout footer={5} header={5} dark>
         <HeroSection />
         <MetricsSection />
