@@ -1,19 +1,41 @@
 "use client";
 import { IFrontMatterProduct } from "@/src/types/prooducts";
 import ProductGridItem from "../components/ProductGridItem";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useFilterProducts } from "../hook/useFilterProducts";
 
 const ProductGrid = ({
   products,
 }: Readonly<{ products: IFrontMatterProduct[] }>) => {
+  const [displayedProducts, setDisplayedProducts] = useState<number>(6);
   const {
     filteredProducts,
     handleCategoryChange,
     selectedCategory,
     filteredProductsCount,
     allProducts
-  } = useFilterProducts(products);
+  } = useFilterProducts(products, setDisplayedProducts);
+
+  const loadMoreProducts = () => {
+    if (displayedProducts < filteredProducts.length) {
+      setDisplayedProducts(displayedProducts + 6);
+    }
+  };
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (
+        window.innerHeight + document.documentElement.scrollTop
+        >= document.documentElement.offsetHeight - 100
+      ) {
+        loadMoreProducts();
+      }
+    };
+
+    window.addEventListener('scroll', onScroll);
+
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [displayedProducts, filteredProducts.length]);
 
   return (
     <section className="product-area py-130 rpy-100 rel z-1">
@@ -28,7 +50,7 @@ const ProductGrid = ({
               value={selectedCategory}
               onChange={handleCategoryChange}
             >
-              <option value="all">All Categories</option>
+              <option value="all">Todas</option>
               <option value="web">Web</option>
               <option value="mobile">Mobile</option>
               <option value="design">Design</option>
@@ -40,7 +62,7 @@ const ProductGrid = ({
           </div>
         </div>
         <div className="row">
-          {filteredProducts.map((product) => (
+          {filteredProducts.slice(0, displayedProducts).map((product) => (
             <ProductGridItem product={product} key={product.slug} />
           ))}
         </div>
