@@ -1,4 +1,4 @@
-import Counter from "../components/Counter";
+import Counter from "../../../src/components/Counter";
 
 const MetricsSection = () => {
   return (

@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { WHATSAPP_LINK } from "../constants/common.constant";
+import { WHATSAPP_LINK } from "../../../src/constants/common.constant";
 import Image from "next/image";
-import { CircleIcon, CloseIcon, WeveLinesIcon } from "../assets";
+import { CircleIcon, CloseIcon, WeveLinesIcon } from "../../../src/assets";
 
 const CTAsection = () => {
   return (

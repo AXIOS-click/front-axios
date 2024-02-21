@@ -5,8 +5,8 @@ import {
   INSTAGRAM_LINK,
   LINKEDIN_LINK,
   WHATSAPP_LINK,
-} from "../constants/common.constant";
-import { HeroImage } from "../assets";
+} from "../../../src/constants/common.constant";
+import { HeroImage } from "../../../src/assets";
 import Image from "next/image";
 
 const HeroSection = () => {

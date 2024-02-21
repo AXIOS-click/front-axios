@@ -1,7 +1,7 @@
-import { WEB_DEV_PRICING } from "../constants/pricing.constant";
-import Pricing from "../components/layout/Pricing";
+import { WEB_DEV_PRICING } from "../../../src/constants/pricing.constant";
+import Pricing from "../../../src/components/layout/Pricing";
 import Image from "next/image";
-import { PricingBanner } from "../assets";
+import { PricingBanner } from "../../../src/assets";
 
 const PricingSection = () => {
   return (
