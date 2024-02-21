@@ -13,7 +13,7 @@ const ProductGrid = ({
     handleCategoryChange,
     selectedCategory,
     filteredProductsCount,
-    allProducts
+    allProducts,
   } = useFilterProducts(products, setDisplayedProducts);
 
   const loadMoreProducts = () => {
@@ -25,16 +25,15 @@ const ProductGrid = ({
   useEffect(() => {
     const onScroll = () => {
       if (
-        window.innerHeight + document.documentElement.scrollTop
-        >= document.documentElement.offsetHeight - 100
+        window.innerHeight + document.documentElement.scrollTop >=
+        document.documentElement.offsetHeight - 100
       ) {
         loadMoreProducts();
       }
     };
+    window.addEventListener("scroll", onScroll);
 
-    window.addEventListener('scroll', onScroll);
-
-    return () => window.removeEventListener('scroll', onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, [displayedProducts, filteredProducts.length]);
 
   return (
