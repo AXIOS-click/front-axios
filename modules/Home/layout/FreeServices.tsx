@@ -16,7 +16,8 @@ const FreeServices = () => {
           <div className="col-xl-6 col-lg-8">
             <div className="section-title mb-70 rmb-30 wow fadeInUp delay-0-2s">
               <span className="sub-title mb-15">Por trabajar con nosotros</span>
-              <h2>Estos son los servicios que no tendras que pagar</h2>
+              <h2>Servicios Gratuitos</h2>
+              <p>¡A todos nos encantan las cosas gratis!</p>
             </div>
           </div>
         </div>

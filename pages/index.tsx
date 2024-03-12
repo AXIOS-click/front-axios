@@ -7,6 +7,7 @@ import HeroSection from "@/modules/Home/layout/HeroSection";
 import MetricsSection from "@/modules/Home/layout/MetricsSection";
 import PricingSection from "@/modules/Home/layout/PricingSection";
 import dynamic from "next/dynamic";
+import { ViewOurTemplates } from "@/modules/Home/layout/ViewOurTemplates";
 
 const Counter = dynamic(() => import("@/src/components/Counter"), {
   ssr: false,
@@ -21,6 +22,7 @@ export default function Home() {
         <AdvertiseSection />
         <HeadlineSection />
         <PricingSection />
+        <ViewOurTemplates />
         <FreeServices />
         <CTAsection />
       </Layout>
