@@ -4,7 +4,8 @@ import Link from "next/link";
 import React from "react";
 
 const ProductGridItem = ({ product }: { product: IFrontMatterProduct }) => {
-  const { image, title, category } = product.frontmatter;
+  const { image, title, category,  } = product.frontmatter;
+  const { slug } = product;
   return (
     <div className="col-lg-4 col-md-6">
       <div className="product-item wow fadeInUp delay-0-2s">
@@ -24,14 +25,14 @@ const ProductGridItem = ({ product }: { product: IFrontMatterProduct }) => {
           <h5>
             <p>{title}</p>
           </h5>
-          <div className="ratting-price">
+          {/* <div className="ratting-price">
             <div className="ratting">
               <span className="price">$593</span>
             </div>
-          </div>
-          <a href="#" className="theme-btn style-two">
+          </div> */}
+          <Link href={`/products/${slug}`} className="theme-btn style-two">
             Mas Detalles<i className="far fa-arrow-right" />
-          </a>
+          </Link>
         </div>
       </div>
     </div>
