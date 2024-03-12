@@ -91,3 +91,21 @@ section.product-area.py-130.rpy-100.rel.z-1 > div > div.row > div > div > div.co
   margin-right: 0 !important;
   padding: 15px !important;
 } */
+
+/* Animación del brillo */
+@keyframes loading {
+  0% {
+    background-color: rgba(240, 240, 240, 0.2);
+  }
+  50% {
+    background-color: rgba(204, 204, 204, 0.2);
+  }
+  100% {
+    background-color: rgba(240, 240, 240, 0.2);
+  }
+}
+
+.skeleton-image,
+.skeleton-text {
+  animation: loading 1.8s infinite;
+}
