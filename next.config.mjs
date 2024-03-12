@@ -1,8 +1,17 @@
 import { withSentryConfig } from '@sentry/nextjs';
+import withMDX from '@next/mdx';
 /** @type {import('next').NextConfig} */
+
+withMDX({
+  extension: /\.mdx?$/,
+});
+
 const nextConfig = {
   reactStrictMode: true,
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
 };
+
+const withMDXConfig = withMDX(nextConfig);
 
 export default withSentryConfig(withSentryConfig(nextConfig, {
   // For all available options, see:

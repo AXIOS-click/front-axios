@@ -5,8 +5,8 @@ import React, { FC } from "react";
 
 interface LayoutProps {
   children: any;
-  header: number;
-  footer: number;
+  header?: number;
+  footer?: number;
   singleMenu?: boolean;
   dark?: boolean;
 }
