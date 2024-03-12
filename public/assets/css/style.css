@@ -59,8 +59,8 @@ body {
   line-height: 32px;
   font-size: 16px;
   font-family: var(--ygency-primary-font);
-  --ygency-primary-font: Inter;
-  --ygency-secondary-font: Inter;
+  --ygency-primary-font: var(--Inter-next-font);
+  --ygency-secondary-font: var(--Inter-next-font);
   --ygency-primary-color: #60c3e1;
   --ygency-secondary-color: #ffffff;
   --ygency-tertiary-color: #16161c;

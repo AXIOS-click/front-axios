@@ -10,7 +10,6 @@ import Layout from "@/src/components/layout/Layout";
 import PageBanner from "@/modules/Products/layout/PageBanner";
 import { createWhatsAppLink } from "@/modules/Products/hook/useCreateWhatsAppLink";
 import Image from "next/image";
-import { ImageWithPreloader } from "@/src/components/ImageWithPreloader";
 
 const contentDirectory = path.join(process.cwd(), "content");
 
@@ -43,9 +42,16 @@ export default function ProductPost({
                           className="tab-pane fade preview-item"
                           eventKey="preview1"
                         >
-                          <ImageWithPreloader
+                          <Image
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: "100%", height: "auto" }}
                             src={`/${product.frontmatter.image}`}
-                            alt={product.frontmatter.title + " | AXIOS CLICK PRODUCT"}
+                            alt={
+                              product.frontmatter.title +
+                              " | AXIOS CLICK PRODUCT"
+                            }
                           />
                         </Tab.Pane>
                       </Tab.Content>

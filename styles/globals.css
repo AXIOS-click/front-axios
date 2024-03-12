@@ -2,6 +2,16 @@
 @import "swiper/css/navigation";
 @import "swiper/css/pagination";
 @import "swiper/css/scrollbar";
+
+@import url("/assets/css/flaticon.min.css");
+@import url("/assets/css/fontawesome-5.14.0.min.css");
+@import url("/assets/css/bootstrap.min.css");
+@import url("/assets/css/magnific-popup.min.css");
+@import url("/assets/css/nice-select.min.css");
+@import url("/assets/css/animate.min.css");
+@import url("/assets/css/slick.min.css");
+@import url("/assets/css/style.css");
+
 .main-menu .navbar-collapse li ul {
   transition: 0.3s all;
   display: unset;

@@ -3,6 +3,15 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Fragment, useEffect, useState } from "react";
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["cyrillic"],
+  weight: "400",
+  style: "normal",
+  display: "swap",
+  variable: "--Inter-next-font",
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   const [loaded, setLoaded] = useState(false);
@@ -187,31 +196,11 @@ export default function App({ Component, pageProps }: AppProps) {
           name="google-site-verification"
           content="XFIv75t0o9MHbsmRLPOj9o9Bml6zC_fR4eDHNfwCg6s"
         />
-
-        {/* Google Fonts */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-        {/* Flaticon */}
-        <link rel="stylesheet" href="assets/css/flaticon.min.css" />
-        {/* Font Awesome */}
-        <link rel="stylesheet" href="assets/css/fontawesome-5.14.0.min.css" />
-        {/* Bootstrap */}
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-        {/* Magnific Popup */}
-        <link rel="stylesheet" href="assets/css/magnific-popup.min.css" />
-        {/* Nice Select */}
-        <link rel="stylesheet" href="assets/css/nice-select.min.css" />
-        {/* Animate */}
-        <link rel="stylesheet" href="assets/css/animate.min.css" />
-        {/* Slick */}
-        <link rel="stylesheet" href="assets/css/slick.min.css" />
-        {/* Main Style */}
-        <link rel="stylesheet" href="assets/css/style.css" />
       </Head>
-      {!loaded && <PreLoader />}
-      {loaded && <Component {...pageProps} />}
+      <div className={inter.className}>
+        {!loaded && <PreLoader />}
+        {loaded && <Component {...pageProps} />}
+      </div>
     </Fragment>
   );
 }
