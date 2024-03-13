@@ -197,12 +197,12 @@ export default function App({ Component, pageProps }: AppProps) {
           name="google-site-verification"
           content="XFIv75t0o9MHbsmRLPOj9o9Bml6zC_fR4eDHNfwCg6s"
         />
-        <GoogleAnalytics gaId="G-ZFMW1FE4TK" />
       </Head>
       <div className={inter.className}>
         {!loaded && <PreLoader />}
         {loaded && <Component {...pageProps} />}
       </div>
+      <GoogleAnalytics gaId="G-ZFMW1FE4TK" />
     </Fragment>
   );
 }
